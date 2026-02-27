@@ -6,3 +6,10 @@ sources:
     schema: RAW
     tables:
       - name: NETFLIX_TITLES
+        columns:
+            - name: show_id
+              description: "Unique identifier for each title."
+              tests:
+                - not_null
+                - unique                
+
