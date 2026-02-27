@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: netflix_raw
+    database: NETFLIX_DB
+    schema: RAW
+    tables:
+      - name: NETFLIX_TITLES
+        columns:
+            - name: show_id
+              description: "Unique identifier for each title."
+              tests:
+                - not_null
+                - unique                
+
